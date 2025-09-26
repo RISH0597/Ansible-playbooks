@@ -17,5 +17,5 @@
     - name: Stop Docker Server on Host Machines 
       action: service name=docker state=stopped
 
-    - name: Restart  Docker Server on Host Machines
+    - name: Restart Docker Server on Host Machines
       action: service name=docker state=restarted
