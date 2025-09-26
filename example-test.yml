@@ -15,13 +15,13 @@
       action: yum pkg=mariadb105 state=present
 
     - name: Install httpd on Host Machines 
-      action: yum pkg=phttpd state=present
+      action: yum pkg=httpd state=present
     
     - name: Start httpd Server on Host Machines
-      action: service name=java state=started
+      action: service name=httpd state=started
     
     - name: Stop httpd Server on Host Machines 
-      action: service name=java state=stopped
+      action: service name=httpd state=stopped
 
     - name: Restart httpd Server on Host Machines
-      action: service name=java state=restarted
+      action: service name=httpd state=restarted
