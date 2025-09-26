@@ -5,17 +5,23 @@
   connection: ssh
   tasks:
 
-    - name: Install Git on Host Machine
-      action: yum pkg=git state=present
+    - name: Install java on Host Machine
+      action: yum pkg=java state=present
 
-    - name: Install docker on Host Machines 
-      action: yum pkg=docker state=present
-    
-    - name: Start Docker Server on Host Machines
-      action: service name=docker state=started
-    
-    - name: Stop Docker Server on Host Machines 
-      action: service name=docker state=stopped
+    - name: Install python on Host Machines 
+      action: yum pkg=python state=present
 
-    - name: Restart Docker Server on Host Machines
-      action: service name=docker state=restarted
+    - name: Install mariadb105 on Host Machines 
+      action: yum pkg=mariadb105 state=present
+
+    - name: Install httpd on Host Machines 
+      action: yum pkg=phttpd state=present
+    
+    - name: Start httpd Server on Host Machines
+      action: service name=java state=started
+    
+    - name: Stop httpd Server on Host Machines 
+      action: service name=java state=stopped
+
+    - name: Restart httpd Server on Host Machines
+      action: service name=java state=restarted
